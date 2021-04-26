@@ -21,7 +21,7 @@ int main(){
 	c = sum(a,b);
 	cout<<"sum is "<<c<<endl;
 
-    s = sub(c,a);
+    s = sub(a,b);
     cout<<"sub is "<<s<<endl;
     
 
