@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <cstdlib>
  
 using namespace std;
 
@@ -40,9 +41,9 @@ int main(){
         if (counters.count(word)==0){
             counters[word]=1;
         }else{
-            ++counters[words];
+            ++counters[word];
         }
     }
-
+    system("pause");
     return 0;
 }
