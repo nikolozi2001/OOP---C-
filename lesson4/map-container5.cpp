@@ -3,6 +3,7 @@
 #include <vector>
 #include <map>
 #include <cstdlib>
+#include <set>
  
 using namespace std;
 
@@ -34,18 +35,26 @@ void PrintReversedMap(const map<int, string>& m){
     
 }
 
-int main(){
-    vector<string> words={"one", "two", "one"};
-    map<string, int> counters;
-    //{{"one",2}, {"two",1}}
-    for (const string& word : words){
-        // if (counters.count(word)==0){
-        //     counters[word]=1;
-        // }else{
-            ++counters[word];
-        //}
+void PrintMapWithVector (const map<char, vector<string>>& v){
+        for (const auto& e : v){
+            cout<<e.first<<endl;
+            for(const auto& word : e.second){
+                cout<<word<<" ";
+            }
+            cout<<endl<<"-----"<<endl;
+        }
     }
-    PrintMap(counters);
-    system("pause");
+
+void PrintSet(const set<string>& s){
+    for (const auto& e : s){
+        cout<<e<<endl;
+    }
+}
+
+int main(){
+    vector<string> words={"one", "two", "one", "three", "two"};
+    set<string> sset(begin(words), end(words));
+    PrintSet(sset);
+    
     return 0;
 }
